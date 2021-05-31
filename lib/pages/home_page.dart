@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/widgets/drawer.dart';
 
 class HomePage extends StatelessWidget {
-  final String name = "Anand";
-  final int day = 30;
+  final int days = 30;
+  final String name = "Codepur";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,9 +11,11 @@ class HomePage extends StatelessWidget {
         title: Text("Catalog App"),
       ),
       body: Center(
-        child: Text("Hi this is $day days of code by $name"),
+        child: Container(
+          child: Text("Welcome to $days days of flutter by $name"),
+        ),
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }
